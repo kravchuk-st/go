@@ -21,7 +21,7 @@
           <img class="autor__img" src="./assets/img/ava.png" alt="autor">
         </div>
         <div class="header__links">
-          <a class="btn-reset" href="#"><img src="./assets/img/svg/vk.svg" alt="vkontakte"></a>
+          <a class="btn-reset" href="https://vk.com/viktor365" target="_blank" rel="noreferrer"><img src="./assets/img/svg/vk.svg" alt="vkontakte"></a>
           <a class="btn btn-reset" href="tel:+79200242130">+7 (920) 024-21-30</a>
         </div>
       </div>
@@ -39,7 +39,34 @@
       <div class="container">
         <h2 class="rules__title">Немного про правила</h2>
         <div class="rules__content">
-          <img class="rules__img" src="./assets/img/rules.jpg" alt="rules video">
+          <div class="player">
+            <div class="poster"></div>
+            <video class="player__video viewer" src="./assets/video/rules.mp4"></video>
+            <svg class="icon video-btn">
+              <use xlink:href="./assets/img/svg/player/play-btn.svg#play-btn"></use>
+            </svg>
+            <div class="player__controls">
+              <svg class="icon play-icon player__button">
+                <use id="play" xlink:href="./assets/img/svg/player/play.svg#play-btn"></use>
+              </svg>
+              <div>
+                <p class="controls-time">00:00</p>
+              </div>
+              <input type="range" min="0" max="100" step="0.05" value="0.001" class="progress">
+              <div>
+                <p class="controls-allTime">05:31</p>
+              </div>
+              <div class="volume-grup">
+                <svg class="icon volume-icon mute">
+                  <use id="mute" xlink:href="./assets/img/svg/player/volume.svg#volume-btn"></use>
+                </svg>
+                <input type="range" min="0" max="1" step="0.05" value="0.75" class="volume">
+              </div>
+              <svg class="icon fullscreen-icon">
+                <use xlink:href="./assets/img/svg/player/fullscreen.svg#fullscreen"></use>
+              </svg>
+            </div>
+          </div>
           <div class="rules__descr">
             <p class="rules__text">Попробовать поиграть самостоятельно можно тут</p>
             <div class="rules__btns">
@@ -106,12 +133,15 @@
         <div class="footer__contacts">
           <a class="btn btn-reset" href="tel:+79200242130">+7 (920) 024-21-30</a>
           <div class="footer__links">
-            <a class="btn-reset" href="#"><img src="./assets/img/svg/tg.svg" alt="telegram"></a>
-            <a class="btn-reset" href="#"><img src="./assets/img/svg/vk.svg" alt="vkontakte"></a>
+            <a class="btn-reset" href="https://t.me/vtkachevik" target="_blank" rel="noreferrer"><img src="./assets/img/svg/tg.svg" alt="telegram"></a>
+            <a class="btn-reset" href="https://vk.com/viktor365" target="_blank" rel="noreferrer"><img src="./assets/img/svg/vk.svg" alt="vkontakte"></a>
           </div>
         </div>
       </div>
+      <a class="designer-link btn-reset" href="https://www.behance.net/ugarovpro" target="_blank" rel="noreferrer"><img src="./assets/img/svg/ugarov.svg" alt="designer link"></a>
     </div>
   </footer>
+
+  <script src="./assets/js/player.js"></script>
 </body>
 </html>
