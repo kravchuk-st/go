@@ -168,8 +168,11 @@ h6 {
   align-items: center;
 }
 
-.autor {
+.header .autor {
   margin: 0 auto;
+}
+
+.autor {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,6 +190,11 @@ h6 {
   font-weight: 300;
   font-size: 12px;
   line-height: 15px;
+}
+
+.autor__img {
+  width: 60px;
+  height: 60px;
 }
 
 .header__links {
@@ -357,13 +365,37 @@ h6 {
   column-gap: 55px;
 }
 
-.order__footer .btn {
+.order__footer .btn-dark {
   font-size: 18px;
   line-height: 22px;
+  border-width: 2px
 }
 
 .order__subtext {
   max-width: 160px;
   font-size: 14px;
   line-height: 17px;
+}
+
+.footer {
+  padding: 60px 0 40px;
+  background-color: #000;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.vert-line {
+  height: 100px;
+  border-left: 1px solid #FFFFFF;
+}
+
+.footer__links {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 }
