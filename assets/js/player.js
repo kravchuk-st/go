@@ -2,7 +2,7 @@ const video = document.querySelector('.player__video'),
       poster = document.querySelector('.poster'),
       control = document.querySelector('.player__controls'),
       play = document.querySelector('#play'),
-      playBtn = document.querySelector('.video-btn'),
+      playBtn = document.querySelector('.player .video-btn'),
       playIcon = document.querySelector('.play-icon'),
       progress = document.querySelector('.progress'),
       time = document.querySelector('.controls-time'),
@@ -87,7 +87,7 @@ function updateMute() {
 }
 
 function updateVol(){
-  var volume = this.value;
+  let volume = this.value;
   video.volume = volume;
   controlVol.style.background = `linear-gradient(to right, #fccb1f 0%, #fccb1f ${volume * 100}%, #fff ${volume * 100}%, white 100%)`;
   if (video.volume != 0) {

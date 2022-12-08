@@ -7,7 +7,6 @@
 @font-face {
   font-family: 'Usually';
   src: local('Usually-font-Bold'),
-       url('../fonts/Usually-font-Bold.woff2'),
        url('../fonts/Usually-font-Bold.otf');
   font-weight: 700;
   font-style: normal;
@@ -16,7 +15,6 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-Black'),
-       url('../fonts/Montserrat-Black.woff2'),
        url('../fonts/Montserrat-Black.ttf');
   font-weight: 900;
   font-style: normal;
@@ -25,7 +23,6 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-ExtraBold'),
-       url('../fonts/Montserrat-ExtraBold.woff2'),
        url('../fonts/Montserrat-ExtraBold.ttf');
   font-weight: 800;
   font-style: normal;
@@ -34,7 +31,6 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-Bold'),
-       url('../fonts/Montserrat-Bold.woff2'),
        url('../fonts/Montserrat-Bold.ttf');
   font-weight: 700;
   font-style: normal;
@@ -43,7 +39,6 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-LightItalic'),
-       url('../fonts/Montserrat-LightItalic.woff2'),
        url('../fonts/Montserrat-LightItalic.ttf');
   font-weight: 300;
   font-style: italic;
@@ -52,13 +47,14 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat-LightItalic'),
-       url('../fonts/Montserrat-ExtraLightItalic.woff2'),
        url('../fonts/Montserrat-ExtraLightItalic.ttf');
   font-weight: 200;
   font-style: italic;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -79,6 +75,11 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
+}
+
+h1 {
+  font-size: 148px;
+  line-height: 129px;
 }
 
 h5 {
@@ -154,6 +155,20 @@ h6 {
   border-color: var(--color-active);
 }
 
+.video-btn{
+  width: 211px;
+  height: 40px;
+  background-image: url(../img/svg/player/play-btn.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image .2s ease-in-out;
+}
+
+.video-btn:hover {
+  background-image: url(../img/svg/player/play-btn-hover.svg);
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -205,12 +220,97 @@ h6 {
 }
 
 .info {
+  padding-top: 110px;
   height: 800px;
+  color: var(--color-light);
   background: linear-gradient(80.07deg, #2A0021 6.66%, #2A0021 13.76%, #310C2A 21.74%, #422A41 35.97%, #5E5C67 54.82%, #85A19B 77.41%, #B0ECD4 100%);
   background-image: url(../img/info-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: right;
+}
+
+.info .container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.info__descr {
+  position: relative;
+}
+
+.info__title {
+  margin-left: auto;
+  max-width: 560px;
+  text-align: left;
+}
+
+.info__text {
+  max-width: 265px;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  z-index: 2;
+}
+
+.info__subtext {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.info__video {
+  margin-right: 85px;
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  font-style: normal;
+  background-image: url(../img/info-img.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.video__text {
+  position: absolute;
+  left: -110px;
+  bottom: 90px;
+  z-index: 2;
+  max-width: 190px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+.info__video .video-btn {
+  position: absolute;
+  right: -85px;
+  bottom: 60px;
+  z-index: 2;
+}
+
+.title-border {
+  position: relative;
+}
+
+.title-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  max-width: 260px;
+  border-bottom: 2px solid var(--color-light);
+}
+
+
+.title-btn {
+  margin-top: 105px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .rules {
@@ -233,7 +333,6 @@ h6 {
 .rules__content {
   margin-top: 60px;
   display: flex;
-  column-gap: 140px;
 }
 
 video{
@@ -292,53 +391,50 @@ video{
   transition: all 0.3s;
 }
 
-.progress{
+.progress {
   width: calc(80% - 160px);
 }
 
-.play-icon{
+.play-icon {
   width: 25px;
   height: 25px;
   cursor: pointer;
   fill: var(--color-light);
 }
 
-.volume-grup{
+.volume-grup {
   display: flex;
   align-items: center;
   column-gap: 12px;
 }
 
-.volume-icon{
+.volume-icon {
   width: 25px;
   height: 25px;
   cursor: pointer;
   fill: var(--color-light);
 }
 
-.volume{
+.volume {
   width: 100px;
 }
 
-.controls-time{
+.controls-time {
   width: 55px;
   text-align: left;
 }
 
-.video-player{
+.video-player {
   width: 100%;
   max-width: 1400px;
   height: auto;
 }
 
-.video-btn{
-  width: 211px;
-  height: 40px;
+.player .video-btn{
   position: absolute;
   z-index: 5;
   left: 50px;
   bottom: 30px;
-  cursor: pointer;
 }
 
 .progress,
@@ -385,11 +481,12 @@ video{
 }
 
 .rules__descr {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .rules__text {
   max-width: 260px;
+  margin-left: 140px;
   font-weight: 200;
   font-size: 24px;
   line-height: 29px;
@@ -398,6 +495,7 @@ video{
 
 .rules__btns {
   margin-top: 35px;
+  margin-left: 140px;
   display: flex;
   align-items: center;
   column-gap: 30px;
