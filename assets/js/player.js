@@ -114,8 +114,12 @@ players.forEach((el) => {
       }
 
       function goFullScreen(){
-        if(video.webkitSupportsFullscreen) {
-          video.webkitEnterFullScreen();
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullScreen) {
+          video.msRequestFullScreen();
         }
       }
 

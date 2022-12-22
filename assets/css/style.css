@@ -341,7 +341,7 @@ h6 {
 }
 
 video{
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .player{
@@ -367,7 +367,6 @@ video{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  cursor: pointer;
   transition: 1s;
 }
 
