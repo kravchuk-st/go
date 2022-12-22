@@ -22,7 +22,7 @@
         </div>
         <div class="header__links">
           <a class="btn-reset" href="https://vk.com/viktor365" target="_blank" rel="noreferrer"><img src="./assets/img/svg/vk.svg" alt="vkontakte"></a>
-          <a class="btn btn-reset" href="tel:+79200242130">+7 (920) 024-21-30</a>
+          <a class="btn btn-reset" href="tel:+79120423628">+7 (912) 042-36-28</a>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
               <p class="info__subtext">для настоящих стратегов</p>
             </div>
           </div>
-          <button class="btn btn-active btn-reset title-btn">записаться на пробный урок</button>
+          <button class="btn btn-active btn-reset title-btn modal-btn">записаться на пробный урок</button>
         </div>
         <div class="col">
           <div class="info__video">
@@ -59,29 +59,22 @@
             <video class="player__video viewer" src="./assets/video/rules.mp4"></video>
             <button class="btn-reset video-btn"></button>
             <div class="player__controls">
-              <svg class="icon play-icon player__button">
-                <use id="play" xlink:href="./assets/img/svg/player/play.svg#play-btn"></use>
-              </svg>
-              <div>
-                <p class="controls-time">00:00</p>
+              <button class="icon play-icon btn-reset"></button>
+              <div class="time">
+                <span class="controls-time">00:00</span>
+                <span>/</span>
+                <span class="controls-allTime">05:31</span>
               </div>
               <input type="range" min="0" max="100" step="0.05" value="0.001" class="progress">
-              <div>
-                <p class="controls-allTime">05:31</p>
-              </div>
               <div class="volume-grup">
-                <svg class="icon volume-icon mute">
-                  <use id="mute" xlink:href="./assets/img/svg/player/volume.svg#volume-btn"></use>
-                </svg>
+                <button class="icon volume-icon btn-reset"></button>
                 <input type="range" min="0" max="1" step="0.05" value="0.75" class="volume">
               </div>
-              <svg class="icon fullscreen-icon">
-                <use xlink:href="./assets/img/svg/player/fullscreen.svg#fullscreen"></use>
-              </svg>
+              <button class="icon fullscreen-icon btn-reset"></button>
             </div>
           </div>
           <div class="rules__descr col">
-            <p class="rules__text">Попробовать поиграть самостоятельно можно тут</p>
+            <p class="rules__text">Попробовать поиграть самостоятельно можно&nbsp;тут</p>
             <div class="rules__btns">
               <a href="" class="btn btn-dark btn-reset">вот тут можно</a>
               <a href="" class="btn btn-dark btn-reset">а ещё здесь</a>
@@ -100,7 +93,7 @@
               <p>Жми на кнопку и записывайся на бесплатный онлайн-урок.</p>
               <p>По времени договоримся</p>
             </div>
-            <button class="btn btn-active btn-reset">Жми сюда</button>
+            <button class="btn btn-active btn-reset modal-btn">Жми сюда</button>
           </div>
         </div>
       </div>
@@ -110,7 +103,9 @@
       <div class="container">
         <div class="order__header">
           <h2 class="order__title col">А ещё можешь</h2>
-          <img class="order__img col" src="" alt="img">
+          <div class="col text-left">
+            <img class="order__img" src="./assets/img/svg/arcTop.svg" alt="img">
+          </div>
         </div>
         <h3 class="order__subtitle">заказать у&nbsp;меня пиздатый сайт</h3>
         <div class="order__body">
@@ -123,7 +118,7 @@
             <p class="order__text">Работаем с соцсетями, пилим сайты, льем трафик</p>
             <p class="order__text">Приходи. Сделаем все в лучших традициях одного классика рунета</p>
             <div class="order__footer">
-              <button class="btn btn-dark btn-reset">Заказать</button>
+              <button class="btn btn-dark btn-reset modal-btn">Заказать</button>
               <p class="order__subtext">Долго. Дорого. Охуенно (с)</p>
             </div>
           </div>
@@ -155,6 +150,50 @@
     </div>
   </footer>
 
+  <div class="modal" id="modal-form">
+    <div class="modal__content">
+      <h3 class="modal__title">Оставьте заявку</h3>
+      <h5 class="modal__subtitle">и я в ближайшее время свяжусь с Вами</h5>
+      <form class="form modal__form" action="#" method="post">
+        <div class="form__row">
+          <input type="text" name="name" id="name" placeholder="Ваше имя" autocomplete="off">
+        </div>
+        <div class="form__row">
+          <input type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail" autocomplete="off">
+        </div>
+        <div class="form__row">
+          <input type="tel" name="tel" id="tel" placeholder="Номер телефона" autocomplete="off">
+        </div>
+        <button class="form-btn btn btn-reset" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-video">
+    <div class="modal__content">
+      <div class="player col">
+        <div class="poster"></div>
+        <video class="player__video viewer" src="./assets/video/rules.mp4"></video>
+        <button class="btn-reset video-btn"></button>
+        <div class="player__controls">
+          <button class="icon play-icon btn-reset"></button>
+          <div class="time">
+            <span class="controls-time">00:00</span>
+            <span>/</span>
+            <span class="controls-allTime">05:30</span>
+          </div>
+          <input type="range" min="0" max="100" step="0.05" value="0.001" class="progress">
+          <div class="volume-grup">
+            <button class="icon volume-icon btn-reset"></button>
+            <input type="range" min="0" max="1" step="0.05" value="0.75" class="volume">
+          </div>
+          <button class="icon fullscreen-icon btn-reset"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/modal.js"></script>
   <script src="./assets/js/player.js"></script>
 </body>
 </html>
