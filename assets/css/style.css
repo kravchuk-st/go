@@ -715,7 +715,7 @@ video{
 }
 
 .modal__content {
-  width: 100%;
+  width: 95%;
   max-width: 576px;
   height: auto;
   padding: 35px 55px 55px;
@@ -1052,5 +1052,32 @@ video{
     padding: 60px 0 100px;
     background: url(../img/svg/footer-bg1-sm.svg) 100% 0 no-repeat, url(../img/svg/footer-bg2-sm.svg) 0 bottom no-repeat;
     background-color: #000;
+  }
+
+  .modal__content {
+    padding: 30px 25px;
+  }
+
+  .modal__title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .modal__subtitle {
+    margin-top: 10px;
+  }
+
+  .modal__form {
+    margin-top: 25px;
+  }
+
+  .form-btn,
+  .modal__form .form__row input {
+    line-height: 1.4;
+  }
+
+  #modal-video .video-btn {
+    width: 100px;
+    height: 100px;
   }
 }
