@@ -804,6 +804,10 @@ video{
   transform: translate(-50%, -50%);
 }
 
+.js-validate-error-label {
+  display: none;
+}
+
 @media screen and (max-width: 576px) {
   .header__content {
     flex-direction: column;

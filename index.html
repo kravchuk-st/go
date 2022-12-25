@@ -118,7 +118,7 @@
             <p class="order__text">Работаем с соцсетями, пилим сайты, льем трафик</p>
             <p class="order__text">Приходи. Сделаем все в лучших традициях одного классика рунета</p>
             <div class="order__footer">
-              <button class="btn btn-dark btn-reset modal-btn">Заказать</button>
+              <button class="btn btn-dark btn-reset modal-btn order-btn">Заказать</button>
               <p class="order__subtext">Долго. Дорого. Охуенно (с)</p>
             </div>
           </div>
@@ -154,15 +154,16 @@
     <div class="modal__content">
       <h3 class="modal__title">Оставьте заявку</h3>
       <h5 class="modal__subtitle">и я в ближайшее время свяжусь с Вами</h5>
-      <form class="form modal__form" action="#" method="post">
+      <form class="form modal__form" action="./assets/php/mail.php" method="post">
+        <input type="hidden" name="form_subject" value="">
         <div class="form__row">
-          <input type="text" name="name" id="name" placeholder="Ваше имя" autocomplete="off">
+          <input type="text" name="name" id="name" data-validate-field="name" placeholder="Ваше имя" autocomplete="off">
         </div>
         <div class="form__row">
-          <input type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail" autocomplete="off">
+          <input type="email" name="e-mail" id="e-mail" data-validate-field="email" placeholder="Ваш e-mail" autocomplete="off">
         </div>
         <div class="form__row">
-          <input type="tel" name="tel" id="tel" placeholder="Номер телефона" autocomplete="off">
+          <input type="tel" name="tel" id="tel" data-validate-field="tel" placeholder="Номер телефона" autocomplete="off">
         </div>
         <button class="form-btn btn btn-reset" type="submit">Отправить</button>
       </form>
@@ -173,14 +174,14 @@
     <div class="modal__content">
       <div class="player col">
         <div class="poster"></div>
-        <video class="player__video viewer" src="./assets/video/rules.mp4"></video>
+        <video class="player__video viewer" src="./assets/video/info.mp4"></video>
         <button class="btn-reset video-btn"></button>
         <div class="player__controls">
           <button class="icon play-icon btn-reset"></button>
           <div class="time">
             <span class="controls-time">00:00</span>
             <span>/</span>
-            <span class="controls-allTime">05:30</span>
+            <span class="controls-allTime">79:01</span>
           </div>
           <input type="range" min="0" max="100" step="0.05" value="0.001" class="progress">
           <div class="volume-grup">
@@ -193,6 +194,9 @@
     </div>
   </div>
 
+  <script src="./assets/js/inputmask.min.js"></script>
+  <script src="./assets/js/just-validate.min.js"></script>
+  <script src="./assets/js/form.js"></script>
   <script src="./assets/js/modal.js"></script>
   <script src="./assets/js/player.js"></script>
 </body>

@@ -3,6 +3,7 @@ const header = document.querySelector('header');
 const showModalBtns = document.querySelectorAll('.modal-btn');
 const modalForm = document.querySelector('#modal-form');
 const modalFormContent = modalForm.querySelector('.modal__content');
+const modalFormInputs = [...modalForm.querySelectorAll('input')];
 const modalVideo = document.querySelector('#modal-video');
 const modalVideoContent = modalVideo.querySelector('.modal__content');
 const showModalVideoBtn = document.querySelector('.info__video .video-btn');
@@ -25,14 +26,20 @@ const closeModal = (modal, modalContent) => {
 };
 
 showModalBtns.forEach((el) => {
-  el.addEventListener('click', () => {
+  el.addEventListener('click', (e) => {
     openModal(modalForm, modalFormContent);
+    const [formSubject] = modalFormInputs.filter((el) => {return el.type == 'hidden'});
+    formSubject.value = e.target.classList.contains('order-btn') ? 'Заказ с сайта Го' : 'Пробный урок Го';
   });
 });
 
 modalForm.addEventListener('click', (e) => {
   if (e.target.classList.contains('modal')) {
     closeModal(modalForm, modalFormContent);
+    modalFormInputs.forEach((el) => {
+      el.value = '';
+      el.style = '';
+    });
   }
 });
 
