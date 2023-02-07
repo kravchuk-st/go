@@ -28,7 +28,7 @@ const closeModal = (modal, modalContent) => {
 showModalBtns.forEach((el) => {
   el.addEventListener('click', (e) => {
     openModal(modalForm, modalFormContent);
-    const [formSubject] = modalFormInputs.filter((el) => {return el.type == 'hidden'});
+    const [formSubject] = modalFormInputs.filter((el) => {return el.type === 'hidden'});
     formSubject.value = e.target.classList.contains('order-btn') ? 'Заказ с сайта Го' : 'Пробный урок Го';
   });
 });

@@ -164,7 +164,7 @@ h6 {
 .video-btn{
   width: 211px;
   height: 40px;
-  background-image: url(../img/svg/player/play-btn.svg);
+  background-image: url("../img/svg/player/play-btn.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -172,7 +172,7 @@ h6 {
 }
 
 .video-btn:hover {
-  background-image: url(../img/svg/player/play-btn-hover.svg);
+  background-image: url("../img/svg/player/play-btn-hover.svg");
 }
 
 .header {
@@ -230,7 +230,7 @@ h6 {
   height: 800px;
   color: var(--color-light);
   background: linear-gradient(80.07deg, #2A0021 6.66%, #2A0021 13.76%, #310C2A 21.74%, #422A41 35.97%, #5E5C67 54.82%, #85A19B 77.41%, #B0ECD4 100%);
-  background-image: url(../img/info-bg.jpg);
+  background-image: url("../img/info-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,7 +273,7 @@ h6 {
   width: 300px;
   height: 500px;
   font-style: normal;
-  background-image: url(../img/info-img.png);
+  background-image: url("../img/info-img.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -320,7 +320,7 @@ h6 {
 
 .rules {
   padding: 120px 0;
-  background-image: url(../img/svg/rules-bg.svg);
+  background-image: url("../img/svg/rules-bg.svg");
   background-position: 100% 0;
   background-repeat: no-repeat;
 }
@@ -363,7 +363,7 @@ video{
   top: 0;
   bottom: 0;
   z-index: 2;
-  background-image: url(../img/rules.jpg);
+  background-image: url("../img/rules.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -536,9 +536,10 @@ video{
 }
 
 .play {
+  position: relative;
   height: 690px;
   padding-top: 85px;
-  background-image: url(../img/play-bg.jpg);
+  background-image: url("../img/play-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -569,7 +570,7 @@ video{
   flex-direction: column;
   row-gap: 15px;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 1.2;
 }
 
 .play__descr .btn-active {
@@ -578,7 +579,7 @@ video{
 
 .order {
   padding: 110px 0 100px;
-  background-image: url(../img/svg/order-bg.svg);
+  background-image: url("../img/svg/order-bg.svg");
   background-position: 85% 95px;
   background-repeat: no-repeat
 }
@@ -800,7 +801,7 @@ video{
   top: 50%;
   left: 50%;
   bottom: auto;
-  background-image: url(../img/svg/player/play-btn-modal.svg);
+  background-image: url("../img/svg/player/play-btn-modal.svg");
   transform: translate(-50%, -50%);
 }
 
@@ -831,6 +832,81 @@ video{
 
   .info__video {
     margin-right: 0;
+  }
+
+  .rules {
+    background-size: 200px;
+  }
+
+  .order__title {
+    font-size: 72px;
+  }
+
+  .order__img {
+    width: 80px;
+    height: auto;
+  }
+
+  .order__subtitle {
+    font-size: 38px;
+  }
+
+  .play__content {
+    column-gap: 100px;
+  }
+
+  .play__title {
+    font-size: 60px;
+  }
+
+  .play__text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .rules {
+    background-size: 150px;
+  }
+
+  .rules__title {
+    font-size: 46px;
+  }
+
+  .rules__text,
+  .rules__btns {
+    margin-left: 50px;
+  }
+
+  .order {
+    background-position: 90% 80px;
+    background-size: 90px;
+  }
+
+  .order__title {
+    font-size: 56px;
+  }
+
+  .order__subtitle {
+    max-width: 430px;
+    font-size: 32px;
+  }
+
+  .play__title {
+    max-width: 475px;
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .play__content {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+  }
+
+  .play__title {
+    text-align: left;
   }
 }
 
@@ -871,6 +947,10 @@ video{
     line-height: 1.05;
   }
 
+  .title-border::after {
+    bottom: -15px;
+  }
+
   .info__text {
     position: static;
     margin: 20px auto 0;
@@ -894,16 +974,17 @@ video{
     bottom: 40px;
     width: 135px;
     height: 50px;
-    background-image: url(../img/svg/player/play-btn-sm.svg);
+    background-image: url("../img/svg/player/play-btn-sm.svg");
   }
 
   .info__video .video-btn:hover {
-    background-image: url(../img/svg/player/play-btn-sm.svg);
+    background-image: url("../img/svg/player/play-btn-sm.svg");
   }
 
   .rules {
     padding: 60px 0 100px;
-    background-image: url(../img/svg/rules-bg-sm.svg);
+    background-image: url("../img/svg/rules-bg-sm.svg");
+    background-size: auto;
   }
 
   .rules__title {
@@ -935,18 +1016,13 @@ video{
   .play {
     height: 700px;
     padding-top: 60px;
-  }
-
-  .play__content {
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 40px;
+    background-image: url("../img/play-bg-sm.jpg");
+    background-position: center bottom;
   }
 
   .play__title {
     max-width: 275px;
     font-size: 36px;
-    text-align: left;
   }
 
   .play__text {
@@ -960,9 +1036,10 @@ video{
 
   .order {
     padding: 60px 0 85px;
-    background-image: url(../img/svg/order-bg-sm.svg);
+    background-image: url("../img/svg/order-bg-sm.svg");
     background-position: 15% 65%;
     background-repeat: no-repeat;
+    background-size: auto;
   }
 
   .order__title {
